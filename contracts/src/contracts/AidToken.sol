@@ -11,11 +11,7 @@ contract AidToken is ERC20 {
 		_;
 	}
 
-	constructor(
-		string memory _name,
-		string memory _symbol,
-		address _admin
-	) public ERC20(_name, _symbol) {
+	constructor( string memory _name, string memory _symbol, address _admin ) public ERC20(_name, _symbol) {
 		owner[msg.sender] = true;
 		owner[_admin] = true;
 		_mint(msg.sender, 10000);

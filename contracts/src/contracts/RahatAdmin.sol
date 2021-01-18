@@ -50,8 +50,7 @@ contract RahatAdmin {
 	constructor(
 		AidToken _tokenContract,
 		Rahat _rahatContract,
-		uint256 _intitialSupply,
-		address _admin
+		uint256 _intitialSupply
 	) public {
 		tokenContract = _tokenContract;
 		rahatContract = _rahatContract;
@@ -60,7 +59,7 @@ contract RahatAdmin {
 		//mintSuccess = success;
 		//mintData = abi.decode(result,(uint256));
 
-		owner[_admin] = true;
+		owner[msg.sender] = true;
 	}
 
 	/// @notice allocate token to projects

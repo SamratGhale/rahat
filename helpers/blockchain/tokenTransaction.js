@@ -2,7 +2,7 @@ const ethers = require('ethers');
 const config = require('config');
 const { ethersContract } = require('./contract');
 const { getAbi } = require('./abi');
-const { token } = require('../../config/settings.json');
+//const { token } = require('../../config/settings.json');
 
 const network = config.get('blockchain.httpProvider');
 const provider = new ethers.providers.JsonRpcProvider(network);
